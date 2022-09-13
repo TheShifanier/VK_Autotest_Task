@@ -1,0 +1,32 @@
+import pytest
+
+#First task: We will test float type. 
+#First one will fail because of how approx method, second - pass.
+
+def test1(self):
+self.assert 11.1 == pytest.approx(11.2)
+
+def test2(self):
+self.assert 11.1 == pytest.approx(11.2, 0.1)
+
+#Then, third and forth: dictionary simple test
+
+def test3(self):
+  self.assert {'a': {'b': 2, 'c': {'d': 4} } } == {'a': {'b': 2, 'c': {'d': 4} } }
+  
+  
+def test4(self):
+  a = {"name" : "Dog",
+    "location": "Room",
+    "color": "Brown",}
+  b = {
+     "name" : "Dog",
+     "location": "Room",
+     "color": "Brown",
+     }
+self.assert a == b
+
+def test4dop(self):
+  Dic1 = {"One": 1, "Two": 2}
+  Dic2 = {"One": 1, "Two": 2}
+  self.assertEqual(Dic1, Dic2)
